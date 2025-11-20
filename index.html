@@ -1,17 +1,132 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="id">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" href="styles/style.css"/>
-  <title>portfolio </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mercendbenz item - Luxury Portfolio</title>
+    <!-- Load Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Font Configuration for Luxury Feel */
+        /* Using Playfair Display for headings and Inter for body text */
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Setting up a very dark, almost black background */
+        body {
+            background-color: #0c0a09; /* Deep Charcoal/Zinc-950 equivalent */
+            color: #f3f4f6; /* Light gray text */
+        }
+        /* Custom hover effect for luxury items */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.05), 
+                        0 10px 10px -5px rgba(255, 255, 255, 0.02);
+        }
+        /* Gold Accent Color (Tailwind amber-400) */
+        .gold-accent {
+            color: #fbbf24;
+        }
+    </style>
 </head>
-<body style="background-color:purple">
-  <h1 style="color:white;font-size:12px;">
-    hallo semua
-  </h1>
-  <h1 style="color:orange;font;size:36px;">
-    namaku raihan danang dwi saputra
-  </h1>
+<body class="font-body antialiased min-h-screen">
+
+    <!-- Header & Navigation --><header class="border-b border-amber-400/20 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <h1 class="font-heading text-4xl font-extrabold gold-accent tracking-wider">
+                mercendbenz item
+            </h1>
+            <nav class="space-x-8 text-sm uppercase hidden md:flex">
+                <a href="#home" class="hover:text-amber-400 transition duration-300">Beranda</a>
+                <a href="#products" class="hover:text-amber-400 transition duration-300">Produk</a>
+                <a href="#about" class="hover:text-amber-400 transition duration-300">Tentang Kami</a>
+                <a href="#contact" class="hover:text-amber-400 transition duration-300">Kontak</a>
+            </nav>
+            <button class="md:hidden text-zinc-100 hover:text-amber-400 transition duration-300">
+                <!-- Simple Menu Icon --><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section --><section id="home" class="py-24 md:py-32 text-center bg-zinc-900 border-b border-amber-400/20">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="text-lg uppercase tracking-widest gold-accent mb-4">Koleksi Pilihan Eksklusif</p>
+            <h2 class="font-heading text-6xl md:text-8xl font-bold mb-6 leading-tight">
+                <span class="text-zinc-100">Keanggunan</span> yang <span class="gold-accent">Abadi</span>
+            </h2>
+            <p class="text-zinc-400 text-xl max-w-2xl mx-auto mb-8">
+                Temukan item-item warisan yang dirancang dengan presisi dan gairah, mendefinisikan kembali arti kemewahan minimalis.
+            </p>
+            <a href="#products" class="inline-block px-10 py-3 text-lg gold-accent border border-amber-400 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition duration-500 shadow-xl shadow-amber-400/20">
+                Jelajahi Koleksi
+            </a>
+        </div>
+    </section>
+
+    <!-- Products Section --><section id="products" class="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h3 class="font-heading text-5xl font-semibold gold-accent mb-4">Item Pilihan</h3>
+            <p class="text-zinc-400 text-lg">Setiap item adalah investasi dalam gaya dan kualitas hidup Anda.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <!-- Product Card 1: Parfum --><div class="product-card bg-zinc-900 rounded-xl overflow-hidden p-6 border border-zinc-800/50 shadow-2xl shadow-zinc-950/50">
+                <div class="aspect-square bg-zinc-800 rounded-lg mb-6 flex items-center justify-center p-8">
+                    <!-- Image for Perfume --><img src="https://image.pollinations.ai/prompt/luxury%20perfume%20bottle%20gold%20and%20black%20elegant%20minimalist%20product%20photography?width=400&height=400&seed=42" alt="The Elixir No. 5 Perfume Bottle" class="w-2/3 h-auto rounded-md object-cover border-4 border-amber-400/30">
+                </div>
+                <h4 class="font-heading text-3xl gold-accent mb-2">The Elixir No. 5</h4>
+                <p class="text-zinc-500 mb-4">Rp 1.950.000</p>
+                <p class="text-zinc-300 font-body text-sm leading-relaxed">
+                    Aroma langka yang memikat, mencerminkan esensi kemewahan abadi. Diramu dari esensi terbaik dunia, ia menawarkan jejak keharuman yang tahan lama dan menawan. Sebuah pernyataan keindahan yang lembut dan berkelas.
+                </p>
+            </div>
+
+            <!-- Product Card 2: Ikat Pinggang --><div class="product-card bg-zinc-900 rounded-xl overflow-hidden p-6 border border-zinc-800/50 shadow-2xl shadow-zinc-950/50">
+                <div class="aspect-square bg-zinc-800 rounded-lg mb-6 flex items-center justify-center p-8">
+                    <!-- Image for Belt --><img src="https://image.pollinations.ai/prompt/luxury%20black%20leather%20belt%20with%20gold%20buckle%20elegant%20minimalist%20product%20photography?width=400&height=400&seed=43" alt="The Heritage Strap Luxury Belt" class="w-full h-auto rounded-md object-cover border-4 border-amber-400/30">
+                </div>
+                <h4 class="font-heading text-3xl gold-accent mb-2">The Heritage Strap</h4>
+                <p class="text-zinc-500 mb-4">Rp 1.200.000</p>
+                <p class="text-zinc-300 font-body text-sm leading-relaxed">
+                    Dibuat dari kulit premium terpilih dengan gesper presisi berlapis emas, ini adalah simbol status dan ketahanan. Dikerjakan tangan oleh pengrajin ahli, menjanjikan ketahanan seumur hidup dan tampilan yang selalu elegan.
+                </p>
+            </div>
+
+            <!-- Product Card 3: Topi --><div class="product-card bg-zinc-900 rounded-xl overflow-hidden p-6 border border-zinc-800/50 shadow-2xl shadow-zinc-950/50">
+                <div class="aspect-square bg-zinc-800 rounded-lg mb-6 flex items-center justify-center p-8">
+                    <!-- Image for Hat --><img src="https://image.pollinations.ai/prompt/luxury%20black%20fedora%20hat%20wool%20elegant%20minimalist%20product%20photography?width=400&height=400&seed=44" alt="The Crown Classic Fedora Hat" class="w-full h-auto rounded-md object-cover border-4 border-amber-400/30">
+                </div>
+                <h4 class="font-heading text-3xl gold-accent mb-2">The Crown Classic</h4>
+                <p class="text-zinc-500 mb-4">Rp 850.000</p>
+                <p class="text-zinc-300 font-body text-sm leading-relaxed">
+                    Sebuah mahakarya penutup kepala. Desain klasik dengan sentuhan kontemporer, terbuat dari wol eksklusif yang ringan. Memberikan pernyataan gaya yang tak terbantahkan, cocok untuk setiap kesempatan formal maupun kasual.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer --><footer class="mt-20 py-10 border-t border-amber-400/20 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div id="about" class="mb-6">
+                <h4 class="font-heading text-xl gold-accent mb-2">mercendbenz item</h4>
+                <p class="text-zinc-400 text-sm">Kemewahan adalah Detail. Kualitas adalah Janji.</p>
+            </div>
+            <div id="contact" class="flex justify-center space-x-6 text-sm text-zinc-500">
+                <p>&copy; 2025 mercendbenz item. Hak Cipta Dilindungi.</p>
+                <a href="#" class="hover:text-amber-400 transition duration-300">Kebijakan Privasi</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
